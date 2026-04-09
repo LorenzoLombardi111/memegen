@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Box Shadow Generator Online — freeboxshadow.app</title>
+    <meta name="description" content="Free CSS box-shadow generator. Create, preview, and copy box shadows with a visual editor. No sign-up, runs in your browser.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://freeboxshadow.app/">
+    <meta name="theme-color" content="#faf9f6">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Box Shadow Generator Online — freeboxshadow.app">
+    <meta property="og:description" content="Free CSS box-shadow generator. Create, preview, and copy box shadows with a visual editor. No sign-up, runs in your browser.">
+    <meta property="og:image" content="https://freeboxshadow.app/og-image.svg">
+    <meta property="og:url" content="https://freeboxshadow.app/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Box Shadow Generator Online — freeboxshadow.app">
+    <meta name="twitter:description" content="Free CSS box-shadow generator. Create, preview, and copy box shadows with a visual editor. No sign-up, runs in your browser.">
+    <meta name="twitter:image" content="https://freeboxshadow.app/og-image.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "freeboxshadow.app",
+        "description": "Free CSS box-shadow generator. Create, preview, and copy box shadows with a visual editor.",
+        "url": "https://freeboxshadow.app/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I generate a CSS box shadow?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Open freeboxshadow.app and use the visual sliders to adjust horizontal offset, vertical offset, blur radius, spread radius, and color. The live preview updates instantly, and you can copy the generated CSS with one click." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I add multiple box shadows?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. freeboxshadow.app supports multiple shadow layers. Click Add Shadow to create additional layers, each with independent settings. Layers are combined into a single CSS box-shadow property." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the CSS box-shadow syntax?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The CSS box-shadow syntax is: box-shadow: offset-x offset-y blur-radius spread-radius color inset. For example: box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.15). The inset keyword is optional and creates an inner shadow." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does freeboxshadow.app support inset shadows?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Toggle the Inset option on any shadow layer to switch between outer and inner shadows. Inset shadows appear inside the element rather than outside." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use shadow presets?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. freeboxshadow.app includes preset shadows for common styles like subtle, medium, large, sharp, soft glow, and layered effects. Click any preset to load it instantly, then customize further." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is freeboxshadow.app free to use?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. freeboxshadow.app is completely free with no sign-up required. All processing happens in your browser. No ads, no tracking, no cookies." }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freeboxshadow.app/"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #faf9f6;
+            --surface: #f4f2ee;
+            --border: #e8e4dd;
+            --text-primary: #1a1917;
+            --text-secondary: #6b6760;
+            --text-muted: #9e9b96;
+            --accent: #C49A2A;
+            --accent-hover: #A8831F;
+            --accent-text: #ffffff;
+            --destructive: #c0392b;
+            --success: #27ae60;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+            --font-body: 'Lora', serif;
+            --font-ui: 'DM Sans', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+            --preview-bg: #ffffff;
+            --preview-box: #ffffff;
+        }
+
+        html.dark {
+            --bg: #141412;
+            --surface: #1e1c1a;
+            --border: #2e2b27;
+            --text-primary: #f0ede8;
+            --text-secondary: #9e9b96;
+            --text-muted: #6b6760;
+            --accent: #D4A835;
+            --accent-hover: #C49A2A;
+            --accent-text: #ffffff;
+            --success: #2ecc71;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
+            --preview-bg: #2a2a2a;
+            --preview-box: #3a3a3a;
+        }
+
+        html { font-size: 15px; line-height: 1.6; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); }
+        .app-wrap { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* Header */
+        .header { height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--bg); flex-shrink: 0; }
+        .header-brand { font-family: var(--font-ui); font-size: 15px; font-weight: 600; color: var(--accent); text-decoration: none; }
+        .header-actions { display: flex; align-items: center; gap: 8px; }
+        .theme-toggle { font-family: var(--font-ui); font-size: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 6px 12px; cursor: pointer; color: var(--text-secondary); transition: all 0.15s ease; display: flex; align-items: center; gap: 6px; }
+        .theme-toggle:hover { background: var(--border); }
+
+        /* Buttons */
+        .btn { font-family: var(--font-ui); font-size: 13px; font-weight: 500; border: none; border-radius: 8px; padding: 8px 16px; cursor: pointer; transition: all 0.15s ease; display: inline-flex; align-items: center; gap: 6px; }
+        .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-primary { background: var(--accent); color: var(--accent-text); }
+        .btn-primary:hover:not(:disabled) { background: var(--accent-hover); }
+        .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); }
+        .btn-secondary:hover:not(:disabled) { background: var(--surface); }
+        .btn-destructive { background: transparent; border: 1px solid var(--destructive); color: var(--destructive); }
+        .btn-destructive:hover:not(:disabled) { background: var(--surface); }
+        .btn-sm { padding: 4px 10px; font-size: 12px; }
+
+        /* Main Layout */
+        .main-layout { flex: 1; display: flex; overflow: hidden; min-height: 0; }
+
+        /* Controls Panel */
+        .controls-panel { width: 340px; flex-shrink: 0; display: flex; flex-direction: column; border-right: 1px solid var(--border); background: var(--bg); overflow-y: auto; }
+        .controls-header { padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--surface); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+        .controls-title { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+        .controls-body { flex: 1; overflow-y: auto; }
+
+        /* Presets */
+        .presets-section { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+        .presets-label { font-family: var(--font-ui); font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .presets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .preset-btn { font-family: var(--font-ui); font-size: 11px; font-weight: 500; padding: 8px 4px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--text-secondary); cursor: pointer; transition: all 0.15s ease; text-align: center; }
+        .preset-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Shadow Layer */
+        .shadow-layer { padding: 16px; border-bottom: 1px solid var(--border); }
+        .layer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+        .layer-title { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text-primary); }
+        .layer-actions { display: flex; gap: 4px; }
+
+        /* Slider Control */
+        .slider-control { margin-bottom: 12px; }
+        .slider-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+        .slider-name { font-family: var(--font-ui); font-size: 12px; font-weight: 500; color: var(--text-secondary); }
+        .slider-value { font-family: var(--font-code); font-size: 11px; color: var(--text-muted); min-width: 36px; text-align: right; }
+        input[type="range"] { -webkit-appearance: none; width: 100%; height: 4px; border-radius: 2px; background: var(--border); outline: none; transition: all 0.15s ease; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 2px solid var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 2px solid var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+        /* Color + Opacity Row */
+        .color-row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+        .color-input-wrap { display: flex; align-items: center; gap: 8px; flex: 1; }
+        .color-swatch { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); cursor: pointer; overflow: hidden; padding: 0; }
+        .color-swatch input[type="color"] { width: 48px; height: 48px; border: none; padding: 0; cursor: pointer; transform: translate(-8px, -8px); }
+        .color-hex { font-family: var(--font-code); font-size: 12px; color: var(--text-primary); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; width: 80px; }
+        .color-hex:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196,154,42,0.12); }
+
+        /* Inset Toggle */
+        .inset-toggle { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+        .inset-toggle label { font-family: var(--font-ui); font-size: 12px; color: var(--text-secondary); cursor: pointer; }
+        .toggle-switch { position: relative; width: 36px; height: 20px; }
+        .toggle-switch input { display: none; }
+        .toggle-track { position: absolute; inset: 0; background: var(--border); border-radius: 10px; transition: all 0.15s ease; cursor: pointer; }
+        .toggle-track::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; background: white; border-radius: 50%; transition: all 0.15s ease; }
+        .toggle-switch input:checked + .toggle-track { background: var(--accent); }
+        .toggle-switch input:checked + .toggle-track::after { left: 18px; }
+
+        /* Preview Area */
+        .preview-area { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .preview-header { padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--surface); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+        .preview-title { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+        .preview-actions { display: flex; gap: 4px; }
+
+        /* Preview Canvas */
+        .preview-canvas { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--preview-bg); position: relative; overflow: hidden; }
+        .preview-box { width: 200px; height: 200px; border-radius: 12px; background: var(--preview-box); transition: box-shadow 0.15s ease; }
+        .preview-bg-toggle { position: absolute; bottom: 12px; right: 12px; display: flex; gap: 4px; }
+        .bg-btn { width: 24px; height: 24px; border-radius: 6px; border: 2px solid var(--border); cursor: pointer; transition: all 0.15s ease; }
+        .bg-btn:hover, .bg-btn.active { border-color: var(--accent); }
+        .bg-btn.bg-light { background: #ffffff; }
+        .bg-btn.bg-dark { background: #1a1a1a; }
+        .bg-btn.bg-color { background: linear-gradient(135deg, #667eea, #764ba2); }
+
+        /* CSS Output */
+        .css-output { border-top: 1px solid var(--border); background: var(--surface); flex-shrink: 0; }
+        .css-output-header { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; border-bottom: 1px solid var(--border); }
+        .css-output-title { font-family: var(--font-ui); font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .css-code { padding: 12px 16px; font-family: var(--font-code); font-size: 12px; line-height: 1.5; color: var(--text-primary); white-space: pre-wrap; word-break: break-all; max-height: 80px; overflow-y: auto; }
+
+        /* Status Bar */
+        .status-bar { height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: var(--surface); border-top: 1px solid var(--border); flex-shrink: 0; }
+        .status-bar span { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); }
+
+        /* Upgrade Prompt */
+        .upgrade-prompt { border-top: 1px solid var(--border); padding: 12px 16px; background: var(--surface); flex-shrink: 0; }
+        .upgrade-prompt .upgrade-title { font-family: var(--font-ui); font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+        .upgrade-prompt .upgrade-desc { font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .upgrade-prompt .upgrade-link { font-family: var(--font-ui); font-size: 12px; color: var(--accent); text-decoration: none; margin-top: 4px; display: inline-block; }
+
+        /* Badge & Toast */
+        .suite-badge { position: fixed; bottom: 40px; right: 16px; font-family: var(--font-ui); font-size: 11px; font-weight: 400; color: var(--text-muted); text-decoration: none; z-index: 10; }
+        .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--text-primary); color: var(--bg); font-family: var(--font-ui); font-size: 13px; padding: 10px 20px; border-radius: 8px; opacity: 0; transition: all 0.15s ease; pointer-events: none; z-index: 1000; }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* SEO Content */
+        .seo-content { max-width: 720px; margin: 0 auto; padding: 64px 24px; font-family: var(--font-body); color: var(--text-primary); }
+        .seo-content h1 { font-family: var(--font-body); font-size: 28px; font-weight: 700; margin-bottom: 24px; }
+        .seo-content h2 { font-family: var(--font-body); font-size: 20px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        .seo-content p { color: var(--text-secondary); margin-bottom: 16px; line-height: 1.7; }
+        .seo-content details { border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 8px; }
+        .seo-content summary { font-family: var(--font-ui); font-weight: 500; cursor: pointer; color: var(--text-primary); }
+        .seo-content details p { margin-top: 12px; margin-bottom: 0; }
+        .seo-footer { text-align: center; padding: 32px 24px; font-family: var(--font-ui); font-size: 12px; color: var(--text-muted); }
+        .more-tools { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
+        .more-tools-label { font-family: var(--font-ui); font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+        .more-tools-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .more-tools-links a { font-family: var(--font-ui); font-size: 12px; color: var(--accent); text-decoration: none; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s ease; }
+        .more-tools-links a:hover { background: var(--surface); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .suite-badge .badge-prefix { display: none; }
+            .main-layout { flex-direction: column; }
+            .controls-panel { width: 100%; max-height: 50vh; border-right: none; border-bottom: 1px solid var(--border); }
+            .presets-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrap">
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="header-brand">freeboxshadow.app</a>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="toggle-icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <div class="controls-header">
+                <span class="controls-title">Shadows</span>
+                <button class="btn btn-primary btn-sm" id="addShadowBtn">+ Add Shadow</button>
+            </div>
+
+            <!-- Presets -->
+            <div class="presets-section">
+                <div class="presets-label">Presets</div>
+                <div class="presets-grid">
+                    <button class="preset-btn" data-preset="subtle">Subtle</button>
+                    <button class="preset-btn" data-preset="medium">Medium</button>
+                    <button class="preset-btn" data-preset="large">Large</button>
+                    <button class="preset-btn" data-preset="sharp">Sharp</button>
+                    <button class="preset-btn" data-preset="soft">Soft Glow</button>
+                    <button class="preset-btn" data-preset="layered">Layered</button>
+                    <button class="preset-btn" data-preset="border">Border</button>
+                    <button class="preset-btn" data-preset="neumorphism">Neumorphic</button>
+                    <button class="preset-btn" data-preset="floating">Floating</button>
+                </div>
+            </div>
+
+            <!-- Shadow Layers Container -->
+            <div class="controls-body" id="shadowLayers"></div>
+
+            <!-- Upgrade Prompt -->
+            <div class="upgrade-prompt" id="upgrade-prompt">
+                <div class="upgrade-title">🔒 Shadow Library</div>
+                <div class="upgrade-desc">Save and sync your custom shadow presets across devices</div>
+                <a href="https://freesuite.app" class="upgrade-link">Unlock with freesuite.app · $2.88/mo</a>
+            </div>
+        </div>
+
+        <!-- Preview Area -->
+        <div class="preview-area">
+            <div class="preview-header">
+                <span class="preview-title">Preview</span>
+                <div class="preview-actions">
+                    <button class="btn btn-secondary btn-sm" id="resetBtn">Reset</button>
+                </div>
+            </div>
+            <div class="preview-canvas" id="previewCanvas">
+                <div class="preview-box" id="previewBox"></div>
+                <div class="preview-bg-toggle">
+                    <button class="bg-btn bg-light active" data-bg="#ffffff"></button>
+                    <button class="bg-btn bg-dark" data-bg="#1a1a1a"></button>
+                    <button class="bg-btn bg-color" data-bg="linear-gradient(135deg, #667eea, #764ba2)"></button>
+                </div>
+            </div>
+            <div class="css-output">
+                <div class="css-output-header">
+                    <span class="css-output-title">CSS Output</span>
+                    <button class="btn btn-secondary btn-sm" id="copyBtn">Copy CSS</button>
+                </div>
+                <div class="css-code" id="cssCode">box-shadow: none;</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <footer class="status-bar">
+        <span id="statusLeft">1 shadow layer</span>
+        <span>All processing happens in your browser — nothing uploaded</span>
+    </footer>
+    </div><!-- /.app-wrap -->
+
+    <!-- Freesuite Badge -->
+    <a href="https://freesuite.app" class="suite-badge" target="_blank" rel="noopener">
+        <span class="badge-prefix">by </span>freesuite.app
+    </a>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- SEO Content -->
+    <div class="seo-content">
+        <h1>Free CSS Box Shadow Generator Online — Create Beautiful Shadows</h1>
+
+        <p>freeboxshadow.app is a free online CSS box-shadow generator that lets you visually create and customize box shadows for your web projects. Adjust horizontal and vertical offset, blur radius, spread radius, shadow color, and opacity using intuitive sliders with a live preview that updates instantly. freeboxshadow.app supports multiple shadow layers, inset shadows, and preset styles. Copy the generated CSS with one click and paste it directly into your stylesheet. freeboxshadow.app runs entirely in your browser — no sign-up, no tracking, no ads.</p>
+
+        <h2>How do I create a CSS box shadow with freeboxshadow.app?</h2>
+        <p>Open freeboxshadow.app and adjust the sliders for horizontal offset, vertical offset, blur, spread, color, and opacity. The preview box updates in real time. Add multiple shadow layers for complex effects. When you are satisfied, click Copy CSS to copy the generated box-shadow property to your clipboard. Paste it into your CSS file.</p>
+
+        <h2>Is freeboxshadow.app free to use?</h2>
+        <p>freeboxshadow.app is completely free with no sign-up required. All processing happens in your browser — your data never leaves your device. No ads, no tracking, no cookies.</p>
+
+        <h2>What makes freeboxshadow.app different from other shadow generators?</h2>
+        <p>freeboxshadow.app provides a clean, distraction-free interface with multiple shadow layers, nine built-in presets, customizable preview backgrounds, and instant CSS output. Unlike many online generators, freeboxshadow.app has no ads, no pop-ups, and no account requirements. It works offline as a Progressive Web App.</p>
+
+        <h2>Can I use freeboxshadow.app on my phone?</h2>
+        <p>freeboxshadow.app works on any device with a modern browser — desktop, tablet, or mobile. The interface adapts to your screen size automatically.</p>
+
+        <h2>Is my data safe with freeboxshadow.app?</h2>
+        <p>Yes. freeboxshadow.app processes everything locally in your browser using JavaScript. No data is uploaded to any server.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>How do I generate a CSS box shadow?</summary>
+            <p>Open freeboxshadow.app and use the visual sliders to adjust horizontal offset, vertical offset, blur radius, spread radius, and color. The live preview updates instantly, and you can copy the generated CSS with one click.</p>
+        </details>
+
+        <details>
+            <summary>Can I add multiple box shadows?</summary>
+            <p>Yes. freeboxshadow.app supports multiple shadow layers. Click Add Shadow to create additional layers, each with independent settings. Layers are combined into a single CSS box-shadow property.</p>
+        </details>
+
+        <details>
+            <summary>What is the CSS box-shadow syntax?</summary>
+            <p>The CSS box-shadow syntax is: box-shadow: offset-x offset-y blur-radius spread-radius color inset. For example: box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.15). The inset keyword is optional and creates an inner shadow.</p>
+        </details>
+
+        <details>
+            <summary>Does freeboxshadow.app support inset shadows?</summary>
+            <p>Yes. Toggle the Inset option on any shadow layer to switch between outer and inner shadows. Inset shadows appear inside the element rather than outside.</p>
+        </details>
+
+        <details>
+            <summary>Can I use shadow presets?</summary>
+            <p>Yes. freeboxshadow.app includes preset shadows for common styles like subtle, medium, large, sharp, soft glow, and layered effects. Click any preset to load it instantly, then customize further.</p>
+        </details>
+
+        <details>
+            <summary>Is freeboxshadow.app free to use?</summary>
+            <p>Yes. freeboxshadow.app is completely free with no sign-up required. All processing happens in your browser. No ads, no tracking, no cookies.</p>
+        </details>
+    </div>
+
+    <footer class="seo-footer">
+        &copy; freeboxshadow.app
+        <div class="more-tools">
+            <div class="more-tools-label">More free tools from Freesuite</div>
+            <div class="more-tools-links">
+                <a href="https://freegradientgen.app">Gradient Generator</a>
+                <a href="https://freecolorconvert.app">Color Converter</a>
+                <a href="https://freejsonformatter.app">JSON Formatter</a>
+                <a href="https://freesqlformatter.app">SQL Formatter</a>
+                <a href="https://freebase64.app">Base64 Encoder</a>
+                <a href="https://freecaseconverter.app">Case Converter</a>
+                <a href="https://freenotepad.app">Notepad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    /* ===== Dark Mode ===== */
+    (() => {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle.querySelector('.toggle-icon');
+        const getTheme = () => {
+            const stored = localStorage.getItem('suite_theme');
+            if (stored) return stored;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        const applyTheme = (theme) => {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('suite_theme', theme);
+        };
+        applyTheme(getTheme());
+        toggle.addEventListener('click', () => {
+            const current = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    })();
+
+    /* ===== Toast ===== */
+    const showToast = (message) => {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+    };
+
+    /* ===== Service Worker ===== */
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+
+    /* ===== Box Shadow Generator ===== */
+    (() => {
+        const layersContainer = document.getElementById('shadowLayers');
+        const previewBox = document.getElementById('previewBox');
+        const previewCanvas = document.getElementById('previewCanvas');
+        const cssCode = document.getElementById('cssCode');
+        const statusLeft = document.getElementById('statusLeft');
+
+        let shadows = [];
+        let layerIdCounter = 0;
+
+        const PRESETS = {
+            subtle: [{ x: 0, y: 1, blur: 3, spread: 0, color: '#000000', opacity: 8, inset: false }],
+            medium: [{ x: 0, y: 4, blur: 12, spread: 0, color: '#000000', opacity: 15, inset: false }],
+            large: [{ x: 0, y: 10, blur: 30, spread: -5, color: '#000000', opacity: 20, inset: false }],
+            sharp: [{ x: 4, y: 4, blur: 0, spread: 0, color: '#000000', opacity: 25, inset: false }],
+            soft: [{ x: 0, y: 0, blur: 30, spread: 10, color: '#C49A2A', opacity: 20, inset: false }],
+            layered: [
+                { x: 0, y: 1, blur: 2, spread: 0, color: '#000000', opacity: 8, inset: false },
+                { x: 0, y: 4, blur: 8, spread: 0, color: '#000000', opacity: 6, inset: false },
+                { x: 0, y: 12, blur: 24, spread: 0, color: '#000000', opacity: 4, inset: false }
+            ],
+            border: [{ x: 0, y: 0, blur: 0, spread: 2, color: '#C49A2A', opacity: 100, inset: false }],
+            neumorphism: [
+                { x: 6, y: 6, blur: 12, spread: 0, color: '#000000', opacity: 10, inset: false },
+                { x: -6, y: -6, blur: 12, spread: 0, color: '#ffffff', opacity: 50, inset: false }
+            ],
+            floating: [
+                { x: 0, y: 20, blur: 40, spread: -10, color: '#000000', opacity: 20, inset: false },
+                { x: 0, y: 0, blur: 0, spread: 1, color: '#000000', opacity: 3, inset: false }
+            ]
+        };
+
+        function hexToRgba(hex, opacity) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${(opacity / 100).toFixed(2)})`;
+        }
+
+        function createShadow(config = {}) {
+            const id = layerIdCounter++;
+            return {
+                id,
+                x: config.x ?? 0,
+                y: config.y ?? 4,
+                blur: config.blur ?? 12,
+                spread: config.spread ?? 0,
+                color: config.color ?? '#000000',
+                opacity: config.opacity ?? 15,
+                inset: config.inset ?? false
+            };
+        }
+
+        function renderLayer(shadow) {
+            const div = document.createElement('div');
+            div.className = 'shadow-layer';
+            div.dataset.id = shadow.id;
+            div.innerHTML = `
+                <div class="layer-header">
+                    <span class="layer-title">Shadow ${shadow.id + 1}</span>
+                    <div class="layer-actions">
+                        <button class="btn btn-secondary btn-sm duplicate-btn">Duplicate</button>
+                        <button class="btn btn-destructive btn-sm delete-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <div class="slider-label"><span class="slider-name">Offset X</span><span class="slider-value">${shadow.x}px</span></div>
+                    <input type="range" min="-50" max="50" value="${shadow.x}" data-prop="x">
+                </div>
+                <div class="slider-control">
+                    <div class="slider-label"><span class="slider-name">Offset Y</span><span class="slider-value">${shadow.y}px</span></div>
+                    <input type="range" min="-50" max="50" value="${shadow.y}" data-prop="y">
+                </div>
+                <div class="slider-control">
+                    <div class="slider-label"><span class="slider-name">Blur</span><span class="slider-value">${shadow.blur}px</span></div>
+                    <input type="range" min="0" max="100" value="${shadow.blur}" data-prop="blur">
+                </div>
+                <div class="slider-control">
+                    <div class="slider-label"><span class="slider-name">Spread</span><span class="slider-value">${shadow.spread}px</span></div>
+                    <input type="range" min="-50" max="50" value="${shadow.spread}" data-prop="spread">
+                </div>
+                <div class="color-row">
+                    <div class="color-input-wrap">
+                        <div class="color-swatch"><input type="color" value="${shadow.color}" data-prop="color"></div>
+                        <input type="text" class="color-hex" value="${shadow.color}" data-prop="colorHex">
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <div class="slider-label"><span class="slider-name">Opacity</span><span class="slider-value">${shadow.opacity}%</span></div>
+                    <input type="range" min="0" max="100" value="${shadow.opacity}" data-prop="opacity">
+                </div>
+                <div class="inset-toggle">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="inset-${shadow.id}" ${shadow.inset ? 'checked' : ''} data-prop="inset">
+                        <label class="toggle-track" for="inset-${shadow.id}"></label>
+                    </div>
+                    <label for="inset-${shadow.id}">Inset</label>
+                </div>
+            `;
+
+            // Slider events
+            div.querySelectorAll('input[type="range"]').forEach(slider => {
+                slider.addEventListener('input', () => {
+                    const prop = slider.dataset.prop;
+                    shadow[prop] = parseInt(slider.value);
+                    const valueEl = slider.parentElement.querySelector('.slider-value');
+                    valueEl.textContent = prop === 'opacity' ? `${shadow[prop]}%` : `${shadow[prop]}px`;
+                    update();
+                });
+            });
+
+            // Color picker
+            div.querySelector('input[type="color"]').addEventListener('input', (e) => {
+                shadow.color = e.target.value;
+                div.querySelector('.color-hex').value = e.target.value;
+                update();
+            });
+
+            // Color hex input
+            div.querySelector('.color-hex').addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (/^#[0-9a-fA-F]{6}$/.test(val)) {
+                    shadow.color = val;
+                    div.querySelector('input[type="color"]').value = val;
+                    update();
+                }
+            });
+
+            // Inset toggle
+            div.querySelector('input[data-prop="inset"]').addEventListener('change', (e) => {
+                shadow.inset = e.target.checked;
+                update();
+            });
+
+            // Delete
+            div.querySelector('.delete-btn').addEventListener('click', () => {
+                shadows = shadows.filter(s => s.id !== shadow.id);
+                div.remove();
+                update();
+            });
+
+            // Duplicate
+            div.querySelector('.duplicate-btn').addEventListener('click', () => {
+                const clone = createShadow({ ...shadow });
+                shadows.push(clone);
+                layersContainer.appendChild(renderLayer(clone));
+                update();
+            });
+
+            return div;
+        }
+
+        function generateCSS() {
+            if (shadows.length === 0) return 'box-shadow: none;';
+            const parts = shadows.map(s => {
+                const rgba = hexToRgba(s.color, s.opacity);
+                return `${s.inset ? 'inset ' : ''}${s.x}px ${s.y}px ${s.blur}px ${s.spread}px ${rgba}`;
+            });
+            return `box-shadow: ${parts.join(',\n             ')};`;
+        }
+
+        function update() {
+            // Update preview
+            const shadowVal = shadows.map(s => {
+                const rgba = hexToRgba(s.color, s.opacity);
+                return `${s.inset ? 'inset ' : ''}${s.x}px ${s.y}px ${s.blur}px ${s.spread}px ${rgba}`;
+            }).join(', ');
+            previewBox.style.boxShadow = shadowVal || 'none';
+
+            // Update CSS output
+            cssCode.textContent = generateCSS();
+
+            // Update status
+            const count = shadows.length;
+            statusLeft.textContent = `${count} shadow ${count === 1 ? 'layer' : 'layers'}`;
+        }
+
+        function loadPreset(name) {
+            const preset = PRESETS[name];
+            if (!preset) return;
+            shadows = [];
+            layersContainer.innerHTML = '';
+            preset.forEach(config => {
+                const s = createShadow(config);
+                shadows.push(s);
+                layersContainer.appendChild(renderLayer(s));
+            });
+            update();
+            showToast(`Loaded ${name} preset`);
+        }
+
+        // Add shadow button
+        document.getElementById('addShadowBtn').addEventListener('click', () => {
+            const s = createShadow();
+            shadows.push(s);
+            layersContainer.appendChild(renderLayer(s));
+            update();
+        });
+
+        // Reset
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            shadows = [];
+            layersContainer.innerHTML = '';
+            layerIdCounter = 0;
+            const s = createShadow();
+            shadows.push(s);
+            layersContainer.appendChild(renderLayer(s));
+            update();
+            showToast('Reset to default');
+        });
+
+        // Copy CSS
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            navigator.clipboard.writeText(generateCSS()).then(() => showToast('CSS copied to clipboard'));
+        });
+
+        // Presets
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => loadPreset(btn.dataset.preset));
+        });
+
+        // Preview background toggle
+        document.querySelectorAll('.bg-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const bg = btn.dataset.bg;
+                if (bg.startsWith('linear')) {
+                    previewCanvas.style.background = bg;
+                } else {
+                    previewCanvas.style.background = bg;
+                }
+            });
+        });
+
+        // Initialize with one shadow
+        const initial = createShadow();
+        shadows.push(initial);
+        layersContainer.appendChild(renderLayer(initial));
+        update();
+    })();
+    </script>
+</body>
+</html>

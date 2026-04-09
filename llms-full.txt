@@ -1,0 +1,368 @@
+# freeboxshadow.app — Full Site Content
+
+> This file contains the complete text content of all pages on freeboxshadow.app, formatted in Markdown for AI crawlers.
+
+---
+
+# Page: Home — Free CSS Box Shadow Generator Online
+
+## Free CSS Box Shadow Generator Online — Create Beautiful Shadows
+
+freeboxshadow.app is a free online CSS box-shadow generator that lets you visually create and customize box shadows for your web projects. Adjust horizontal and vertical offset, blur radius, spread radius, shadow color, and opacity using intuitive sliders with a live preview that updates instantly. freeboxshadow.app supports multiple shadow layers, inset shadows, and preset styles. Copy the generated CSS with one click and paste it directly into your stylesheet. freeboxshadow.app runs entirely in your browser — no sign-up, no tracking, no ads.
+
+## How do I create a CSS box shadow with freeboxshadow.app?
+
+Open freeboxshadow.app and adjust the sliders for horizontal offset, vertical offset, blur, spread, color, and opacity. The preview box updates in real time. Add multiple shadow layers for complex effects. When you are satisfied, click Copy CSS to copy the generated box-shadow property to your clipboard. Paste it into your CSS file.
+
+## Is freeboxshadow.app free to use?
+
+freeboxshadow.app is completely free with no sign-up required. All processing happens in your browser — your data never leaves your device. No ads, no tracking, no cookies.
+
+## What makes freeboxshadow.app different from other shadow generators?
+
+freeboxshadow.app provides a clean, distraction-free interface with multiple shadow layers, nine built-in presets, customizable preview backgrounds, and instant CSS output. Unlike many online generators, freeboxshadow.app has no ads, no pop-ups, and no account requirements. It works offline as a Progressive Web App.
+
+## Can I use freeboxshadow.app on my phone?
+
+freeboxshadow.app works on any device with a modern browser — desktop, tablet, or mobile. The interface adapts to your screen size automatically.
+
+## Is my data safe with freeboxshadow.app?
+
+Yes. freeboxshadow.app processes everything locally in your browser using JavaScript. No data is uploaded to any server.
+
+## Frequently Asked Questions
+
+### How do I generate a CSS box shadow?
+Open freeboxshadow.app and use the visual sliders to adjust horizontal offset, vertical offset, blur radius, spread radius, and color. The live preview updates instantly, and you can copy the generated CSS with one click.
+
+### Can I add multiple box shadows?
+Yes. freeboxshadow.app supports multiple shadow layers. Click Add Shadow to create additional layers, each with independent settings. Layers are combined into a single CSS box-shadow property.
+
+### What is the CSS box-shadow syntax?
+The CSS box-shadow syntax is: box-shadow: offset-x offset-y blur-radius spread-radius color inset. For example: box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.15). The inset keyword is optional and creates an inner shadow.
+
+### Does freeboxshadow.app support inset shadows?
+Yes. Toggle the Inset option on any shadow layer to switch between outer and inner shadows. Inset shadows appear inside the element rather than outside.
+
+### Can I use shadow presets?
+Yes. freeboxshadow.app includes preset shadows for common styles like subtle, medium, large, sharp, soft glow, and layered effects. Click any preset to load it instantly, then customize further.
+
+### Is freeboxshadow.app free to use?
+Yes. freeboxshadow.app is completely free with no sign-up required. All processing happens in your browser. No ads, no tracking, no cookies.
+
+---
+
+# Page: freeboxshadow.app vs CSSGenerator.org — Box Shadow Generator Comparison
+
+## freeboxshadow.app vs CSSGenerator.org — Which Shadow Generator Is Better?
+
+CSSGenerator.org offers several CSS generators including a box shadow tool. Both freeboxshadow.app and CSSGenerator.org let you create box shadows visually, but they differ in features, interface quality, and advertising.
+
+freeboxshadow.app is a dedicated box shadow generator with multiple layers, presets, inset support, and a clean interface with no ads. CSSGenerator.org is a multi-tool site that includes a basic shadow generator alongside other CSS tools, but displays advertisements and has fewer shadow-specific features.
+
+## Feature Comparison
+
+| Feature | freeboxshadow.app | CSSGenerator.org |
+|---------|-------------------|------------------|
+| Price | Free | Free |
+| Ads | None | Yes |
+| Multiple shadow layers | Yes | Limited |
+| Inset shadows | Yes | Yes |
+| Presets | 9 styles | No |
+| Live preview | Yes | Yes |
+| Custom preview background | Yes (3 options) | No |
+| Offline support | Yes (PWA) | No |
+| Account required | No | No |
+| One-click copy | Yes | Yes |
+
+### Is freeboxshadow.app better than CSSGenerator.org for box shadows?
+For box shadow generation specifically, freeboxshadow.app offers more features including multiple layers, 9 presets, and custom preview backgrounds — all without ads. CSSGenerator.org offers a broader range of CSS tools but with a simpler shadow generator.
+
+### Does CSSGenerator.org show ads?
+Yes. CSSGenerator.org displays advertisements on its pages. freeboxshadow.app has no ads, no tracking, and no cookies.
+
+### Can I create layered shadows on CSSGenerator.org?
+CSSGenerator.org has limited support for multiple shadow layers. freeboxshadow.app lets you add unlimited layers, each with independent offset, blur, spread, color, opacity, and inset settings.
+
+### Which tool has shadow presets?
+freeboxshadow.app includes 9 built-in presets: subtle, medium, large, sharp, soft glow, layered, border, neumorphic, and floating. CSSGenerator.org does not offer presets.
+
+### Does freeboxshadow.app work offline?
+Yes. freeboxshadow.app is a Progressive Web App that works without an internet connection. CSSGenerator.org requires internet access.
+
+### Are both tools free?
+Yes. Both freeboxshadow.app and CSSGenerator.org are free to use, though CSSGenerator.org includes advertising.
+
+---
+
+# Page: freeboxshadow.app vs shadows.brumm.af — Shadow Generator Comparison
+
+## freeboxshadow.app vs shadows.brumm.af — Comparing CSS Shadow Generators
+
+shadows.brumm.af (Smooth Shadow) by Tobias Brumm is a popular tool that generates smooth, layered CSS shadows. freeboxshadow.app is a general-purpose box shadow generator with visual controls, presets, and multi-layer support.
+
+Both tools produce CSS box-shadow output, but they take different approaches. shadows.brumm.af focuses specifically on creating smooth, multi-layered shadows from a single set of parameters. freeboxshadow.app gives you direct control over each shadow layer individually.
+
+## Feature Comparison
+
+| Feature | freeboxshadow.app | shadows.brumm.af |
+|---------|-------------------|-------------------|
+| Price | Free | Free |
+| Approach | Individual layer control | Smooth layered algorithm |
+| Multiple layers | Yes (manual) | Yes (auto-generated) |
+| Individual layer editing | Yes | No |
+| Inset shadows | Yes | No |
+| Presets | 9 styles | No |
+| Custom preview background | Yes | Limited |
+| Offline support | Yes (PWA) | No |
+| Copy CSS | Yes | Yes |
+
+### When should I use freeboxshadow.app vs shadows.brumm.af?
+Use freeboxshadow.app when you want full control over each shadow layer, need inset shadows, or want to start from presets. Use shadows.brumm.af when you specifically want algorithmically smooth, graduated shadows from a single input.
+
+### Does shadows.brumm.af support inset shadows?
+No. shadows.brumm.af focuses on outer box shadows. freeboxshadow.app supports both inset and outer shadows on any layer.
+
+### Can I edit individual layers in shadows.brumm.af?
+No. shadows.brumm.af generates multiple layers algorithmically from a single set of parameters. freeboxshadow.app lets you add, edit, duplicate, and delete individual layers.
+
+### Which tool creates smoother shadows?
+shadows.brumm.af specializes in algorithmically smooth shadows. freeboxshadow.app achieves similar results with its layered preset, which stacks three progressively softer shadows.
+
+### Does freeboxshadow.app have a smooth shadow mode?
+freeboxshadow.app includes a "Layered" preset that creates smooth, multi-layered shadows similar to what shadows.brumm.af produces. You can also manually add layers for custom smooth effects.
+
+### Are both tools free and private?
+Yes. Both tools are free and process CSS locally in the browser. Neither uploads your data to servers.
+
+---
+
+# Page: CSS Box Shadow Examples — Common Shadow Styles with Code
+
+## CSS Box Shadow Examples — Ready-to-Use Shadow Styles
+
+Looking for CSS box shadow inspiration? Here are common shadow styles you can use in your projects, each with the CSS code ready to copy. All of these shadows can be created and customized in freeboxshadow.app using the visual editor.
+
+## Subtle Shadow
+A barely-there shadow for cards and containers that adds just a hint of depth.
+```css
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+```
+
+## Medium Shadow
+A balanced shadow suitable for most UI elements — visible but not overpowering.
+```css
+box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+```
+
+## Large Elevated Shadow
+Creates a floating effect, perfect for modals, dropdowns, and popover elements.
+```css
+box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.20);
+```
+
+## Sharp Shadow
+A crisp, offset shadow with no blur — creates a retro or brutalist design effect.
+```css
+box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+```
+
+## Soft Glow
+A diffused colored glow effect, great for highlighting active states or focus indicators.
+```css
+box-shadow: 0px 0px 30px 10px rgba(196, 154, 42, 0.20);
+```
+
+## Layered Smooth Shadow
+Multiple shadow layers stacked for a smooth, natural-looking depth effect.
+```css
+box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+             0px 4px 8px 0px rgba(0, 0, 0, 0.06),
+             0px 12px 24px 0px rgba(0, 0, 0, 0.04);
+```
+
+## Border Shadow
+Uses spread with zero blur to create a solid border effect via box-shadow.
+```css
+box-shadow: 0px 0px 0px 2px rgba(196, 154, 42, 1.00);
+```
+
+## Neumorphic Shadow
+Two opposing shadows creating a soft, embossed look popular in neumorphism design.
+```css
+box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.10),
+             -6px -6px 12px 0px rgba(255, 255, 255, 0.50);
+```
+
+## Inset Shadow
+An inner shadow that creates a pressed or recessed effect.
+```css
+box-shadow: inset 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+```
+
+All of these examples are available as one-click presets in freeboxshadow.app. Open the tool, select a preset, and customize it to match your design.
+
+### How do I use these box shadow examples?
+Copy the CSS code and paste it into your stylesheet applied to any element. You can also open freeboxshadow.app to load these as presets and customize them visually before copying.
+
+### Which box shadow style is best for cards?
+The subtle or medium shadow styles work well for cards. For card hover states, try transitioning from subtle to medium or large shadows using CSS transitions.
+
+### How do I create smooth shadows in CSS?
+Use multiple shadow layers with progressively increasing blur and decreasing opacity. The layered smooth shadow example above demonstrates this technique. freeboxshadow.app makes it easy to add and adjust multiple layers visually.
+
+### What is neumorphism in CSS?
+Neumorphism is a design style that uses two box shadows — one dark shadow and one light shadow in opposite directions — to create a soft, embossed appearance. The neumorphic shadow example above shows the technique.
+
+### Can I animate box shadows in CSS?
+Yes. Use CSS transitions to animate between shadow states: `transition: box-shadow 0.2s ease;`. This is commonly used for hover effects on cards and buttons.
+
+### How many box shadow layers can I use?
+CSS supports unlimited box shadow layers separated by commas. freeboxshadow.app lets you add as many layers as you need, each with independent settings.
+
+---
+
+# Page: How to Use CSS box-shadow — Complete Guide
+
+## How to Use CSS box-shadow — A Developer's Complete Guide
+
+The CSS box-shadow property adds shadow effects to elements. It is one of the most commonly used CSS properties for creating depth, elevation, and visual hierarchy in web design. This guide covers everything you need to know about box-shadow, from basic syntax to advanced techniques. Use freeboxshadow.app to experiment with all of these concepts visually.
+
+## The box-shadow syntax
+
+```css
+box-shadow: [inset] offset-x offset-y [blur-radius] [spread-radius] [color];
+```
+
+- **offset-x**: Horizontal displacement. Positive moves right, negative moves left.
+- **offset-y**: Vertical displacement. Positive moves down, negative moves up.
+- **blur-radius**: Optional. Higher values create softer, more diffused shadows. Default is 0 (sharp).
+- **spread-radius**: Optional. Positive values expand the shadow, negative values shrink it. Default is 0.
+- **color**: Optional. Any CSS color value. Default is the element's text color.
+- **inset**: Optional keyword. Places the shadow inside the element.
+
+## Basic examples
+
+A simple drop shadow: `box-shadow: 2px 2px 4px rgba(0,0,0,0.1);`
+An inset shadow: `box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);`
+A colored glow: `box-shadow: 0 0 20px rgba(196,154,42,0.3);`
+
+## Multiple shadows
+
+Separate multiple shadows with commas. They render in order — first listed is on top.
+
+```css
+box-shadow: 0 1px 2px rgba(0,0,0,0.07),
+             0 4px 8px rgba(0,0,0,0.05),
+             0 12px 24px rgba(0,0,0,0.03);
+```
+
+## Spread radius tricks
+
+A spread with no blur creates a solid border effect without affecting layout: `box-shadow: 0 0 0 2px #C49A2A;`
+
+Negative spread shrinks the shadow smaller than the element, useful for focused shadow effects: `box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);`
+
+## Performance considerations
+
+- box-shadow triggers repaint but not reflow, so it is relatively efficient to animate.
+- Use `will-change: box-shadow` for animated shadows to hint to the browser.
+- Avoid very large blur values (100px+) on many elements simultaneously.
+- Consider using `filter: drop-shadow()` for non-rectangular elements.
+
+## Browser support
+
+box-shadow is supported in all modern browsers with no prefix required. It has been supported since IE9, Chrome 10, Firefox 4, and Safari 5.1.
+
+freeboxshadow.app lets you experiment with all of these box-shadow features visually with instant preview and one-click CSS copying.
+
+### What is the default box-shadow value?
+The default value is `none`, meaning no shadow is applied. When you add a box-shadow, only offset-x and offset-y are required; blur, spread, and color are optional.
+
+### How do I remove a box shadow?
+Set `box-shadow: none;` to remove all shadows from an element. To remove a shadow on hover, use `element:hover { box-shadow: none; }`.
+
+### Can I use box-shadow for borders?
+Yes. Using `box-shadow: 0 0 0 2px #color;` creates a solid border-like effect without affecting the element's box model or layout. This is useful for focus indicators and outlines.
+
+### Does box-shadow affect layout?
+No. Box shadows are purely visual and do not affect the element's size or the flow of surrounding elements. This is different from border, which adds to the element's dimensions.
+
+### Can I transition box-shadow?
+Yes. Add `transition: box-shadow 0.2s ease;` to smoothly animate between shadow states. This is commonly used for hover effects. freeboxshadow.app helps you create both the default and hover shadow values.
+
+### What is the difference between box-shadow and drop-shadow?
+box-shadow creates a rectangular shadow matching the element's box. `filter: drop-shadow()` creates a shadow that follows the element's actual shape, including transparent areas in images and SVGs.
+
+---
+
+# Page: Tailwind CSS Box Shadow Guide — Using Shadows in Tailwind
+
+## Tailwind CSS Box Shadow — Complete Guide to Shadow Utilities
+
+Tailwind CSS includes built-in shadow utilities that apply predefined box-shadow values to elements. This guide covers all Tailwind shadow classes, how to customize them, and when to use a visual tool like freeboxshadow.app for creating custom shadow values.
+
+## Default Tailwind shadow classes
+
+Tailwind provides six shadow utilities out of the box:
+- `shadow-sm`: Extra small shadow
+- `shadow`: Default shadow
+- `shadow-md`: Medium shadow
+- `shadow-lg`: Large shadow
+- `shadow-xl`: Extra large shadow
+- `shadow-2xl`: Largest shadow
+- `shadow-none`: Remove shadow
+- `shadow-inner`: Inset shadow
+
+## Using shadows in Tailwind
+
+Apply shadow classes directly to elements: `<div class="shadow-lg rounded-lg p-6">Content</div>`
+
+Combine with hover for interactive effects: `<div class="shadow hover:shadow-xl transition-shadow">Card</div>`
+
+## Custom shadows in Tailwind
+
+Extend your Tailwind config with custom shadow values:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      boxShadow: {
+        'custom': '0 4px 12px rgba(0, 0, 0, 0.15)',
+        'glow': '0 0 30px rgba(196, 154, 42, 0.2)',
+      }
+    }
+  }
+}
+```
+
+Then use: `<div class="shadow-custom">...</div>`
+
+## Creating custom Tailwind shadows with freeboxshadow.app
+
+1. Open freeboxshadow.app
+2. Design your shadow visually using the sliders and preview
+3. Click Copy CSS to get the box-shadow value
+4. Paste the value into your Tailwind config under `theme.extend.boxShadow`
+5. Use the custom class name in your HTML
+
+This workflow lets you design shadows visually with freeboxshadow.app and integrate them seamlessly into your Tailwind project.
+
+### What are the default Tailwind box shadow values?
+Tailwind's default shadows range from `shadow-sm` (subtle) to `shadow-2xl` (prominent). Each uses a different combination of offset, blur, spread, and opacity values. Check the Tailwind docs for exact CSS values.
+
+### How do I add custom shadows in Tailwind?
+Add custom values under `theme.extend.boxShadow` in your tailwind.config.js file. Use freeboxshadow.app to visually design the shadow, copy the CSS value, and paste it into your config.
+
+### Can I use hover shadows in Tailwind?
+Yes. Use `hover:shadow-lg` or any shadow class with the hover prefix. Add `transition-shadow` for a smooth animation between states.
+
+### Does Tailwind support inset shadows?
+Yes. Use the `shadow-inner` class for a default inset shadow. For custom inset shadows, prefix your custom value with "inset" in the Tailwind config.
+
+### How do I remove a shadow in Tailwind?
+Use the `shadow-none` class to remove all shadows from an element. This is useful for responsive designs where you want shadows only at certain breakpoints.
+
+### Can I use colored shadows in Tailwind?
+Tailwind v3.1+ supports colored shadows with `shadow-{color}` utilities. For more control, create custom shadows with specific RGBA colors using freeboxshadow.app and add them to your Tailwind config.

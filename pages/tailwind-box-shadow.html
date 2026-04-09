@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Box Shadow — Complete Guide | freeboxshadow.app</title>
+    <meta name="description" content="Master Tailwind CSS box shadow utilities. Learn shadow-sm to shadow-2xl, custom shadows, and generate values with freeboxshadow.app.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://freeboxshadow.app/pages/tailwind-box-shadow">
+    <meta name="theme-color" content="#faf9f6">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tailwind CSS Box Shadow — Complete Guide | freeboxshadow.app">
+    <meta property="og:description" content="Master Tailwind CSS box shadow utilities. Learn shadow-sm to shadow-2xl, custom shadows, and generate values with freeboxshadow.app.">
+    <meta property="og:image" content="https://freeboxshadow.app/og-image.svg">
+    <meta property="og:url" content="https://freeboxshadow.app/pages/tailwind-box-shadow">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tailwind CSS Box Shadow — Complete Guide | freeboxshadow.app">
+    <meta name="twitter:description" content="Master Tailwind CSS box shadow utilities. Learn shadow-sm to shadow-2xl, custom shadows, and generate values with freeboxshadow.app.">
+    <meta name="twitter:image" content="https://freeboxshadow.app/og-image.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freeboxshadow.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tailwind Box Shadow",
+                "item": "https://freeboxshadow.app/pages/tailwind-box-shadow"
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Tailwind CSS Box Shadow — Complete Guide to Shadow Utilities",
+        "description": "Master Tailwind CSS box shadow utilities. Learn shadow-sm to shadow-2xl, custom shadows, and generate values with freeboxshadow.app.",
+        "author": {
+            "@type": "Organization",
+            "name": "freeboxshadow.app",
+            "url": "https://freeboxshadow.app/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "freeboxshadow.app",
+            "url": "https://freeboxshadow.app/"
+        },
+        "url": "https://freeboxshadow.app/pages/tailwind-box-shadow",
+        "datePublished": "2026-04-10",
+        "dateModified": "2026-04-10",
+        "mainEntityOfPage": "https://freeboxshadow.app/pages/tailwind-box-shadow"
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are the default Tailwind CSS box shadow classes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tailwind CSS includes eight default box shadow utilities: shadow-sm (small subtle shadow), shadow (default medium shadow), shadow-md (medium shadow), shadow-lg (large shadow), shadow-xl (extra-large shadow), shadow-2xl (largest shadow), shadow-inner (inset shadow), and shadow-none (removes all shadows). Each maps to a specific CSS box-shadow value that increases in size and intensity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add a custom box shadow in Tailwind CSS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Add custom shadows in your tailwind.config.js file under theme.extend.boxShadow. For example: boxShadow: { 'custom': '4px 4px 15px rgba(0, 0, 0, 0.1)' }. Then use it as shadow-custom in your HTML. You can also use arbitrary values like shadow-[0_4px_12px_rgba(0,0,0,0.15)] directly in your markup without editing the config."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add a hover shadow effect in Tailwind CSS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use the hover: prefix with any shadow class, such as hover:shadow-lg. Combine it with the transition-shadow and duration-200 utilities for a smooth animation: class=\"shadow-md hover:shadow-xl transition-shadow duration-200\". This creates a natural lift effect on hover."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use colored shadows in Tailwind CSS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Tailwind CSS v3.1+ supports colored shadows using shadow-{color} utilities. For example, shadow-lg shadow-blue-500/50 applies a large shadow tinted blue at 50% opacity. The shadow color utilities work with any color from your Tailwind palette and support opacity modifiers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between shadow and shadow-md in Tailwind?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The shadow class applies a default shadow of 0 1px 3px rgba(0,0,0,0.1) plus 0 1px 2px rgba(0,0,0,0.06), while shadow-md uses 0 4px 6px rgba(0,0,0,0.1) plus 0 2px 4px rgba(0,0,0,0.06). The shadow-md variant has a larger blur radius and vertical offset, making it more visible and suitable for elevated card or modal elements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I generate custom Tailwind shadow values visually?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use freeboxshadow.app to design shadows visually with sliders for offset, blur, spread, and color. The generator produces standard CSS box-shadow values that you can paste directly into your tailwind.config.js under theme.extend.boxShadow, or use as arbitrary values in your Tailwind classes like shadow-[your_value]."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #faf9f6;
+            --surface: #f4f2ee;
+            --border: #e8e4dd;
+            --text-primary: #1a1917;
+            --text-secondary: #6b6760;
+            --text-muted: #9e9b96;
+            --accent: #C49A2A;
+            --accent-hover: #A8831F;
+            --accent-text: #ffffff;
+            --destructive: #c0392b;
+            --success: #27ae60;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+            --font-body: 'Lora', serif;
+            --font-ui: 'DM Sans', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
+        }
+
+        html.dark {
+            --bg: #141412;
+            --surface: #1e1c1a;
+            --border: #2e2b27;
+            --text-primary: #f0ede8;
+            --text-secondary: #9e9b96;
+            --text-muted: #6b6760;
+            --accent: #D4A835;
+            --accent-hover: #C49A2A;
+            --accent-text: #ffffff;
+            --success: #2ecc71;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        html { font-size: 15px; line-height: 1.6; scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); min-height: 100vh; }
+
+        /* Header */
+        .header {
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-brand {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .header-brand:hover { color: var(--accent-hover); }
+        .header-right { display: flex; align-items: center; gap: 12px; }
+        .theme-toggle {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 12px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.15s ease;
+            line-height: 1;
+        }
+        .theme-toggle:hover { background: var(--border); }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 16px 24px;
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--text-muted);
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 8px; }
+
+        /* Main content */
+        .content-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px 64px;
+        }
+
+        h1 {
+            font-family: var(--font-body);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-family: var(--font-body);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            line-height: 1.35;
+        }
+
+        h3 {
+            font-family: var(--font-body);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        a { color: var(--accent); }
+        a:hover { color: var(--accent-hover); }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        li { margin-bottom: 8px; line-height: 1.6; }
+
+        /* Code blocks */
+        code {
+            font-family: var(--font-code);
+            font-size: 13px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 6px;
+            color: var(--text-primary);
+        }
+        pre {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+            line-height: 1.5;
+        }
+        pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        /* Shadow reference table */
+        .shadow-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-family: var(--font-ui);
+            font-size: 13px;
+        }
+        .shadow-table th {
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--border);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .shadow-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+        .shadow-table tr:last-child td { border-bottom: none; }
+        .shadow-table code {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .shadow-preview {
+            width: 48px;
+            height: 32px;
+            background: var(--bg);
+            border-radius: 6px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Info box */
+        .info-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        .info-box p { margin-bottom: 0; }
+
+        /* FAQ */
+        .faq-section { margin-top: 48px; }
+        .faq-section details {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.15s ease;
+        }
+        .faq-section details[open] {
+            box-shadow: var(--shadow);
+        }
+        .faq-section summary {
+            padding: 16px 20px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface);
+            transition: all 0.15s ease;
+        }
+        .faq-section summary::-webkit-details-marker { display: none; }
+        .faq-section summary::after {
+            content: '+';
+            font-family: var(--font-ui);
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-muted);
+            transition: transform 0.15s ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+        .faq-section details[open] summary::after {
+            content: '\2212';
+        }
+        .faq-section summary:hover { background: var(--border); }
+        .faq-section .faq-answer {
+            padding: 16px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            background: var(--bg);
+        }
+
+        /* CTA */
+        .cta-section {
+            margin-top: 48px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        .cta-section p {
+            max-width: 520px;
+            margin: 0 auto 24px;
+        }
+        .cta-btn {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            background: var(--accent);
+            color: var(--accent-text);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+        .cta-btn:hover { background: var(--accent-hover); color: var(--accent-text); }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            padding: 48px 24px;
+            margin-top: 64px;
+        }
+        .footer-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-inner h3 {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .footer-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .footer-tool-link {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+        .footer-tool-link:hover { background: var(--bg); }
+        .footer-copy {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Suite badge */
+        .suite-badge {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-muted);
+            text-decoration: none;
+            z-index: 100;
+        }
+        .suite-badge:hover { color: var(--text-secondary); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.55rem; }
+            h2 { font-size: 1.2rem; }
+            .content-wrap { padding: 0 16px 48px; }
+            .header { padding: 0 16px; }
+            .breadcrumb { padding: 12px 16px; }
+            .cta-section { padding: 24px 16px; }
+            pre { padding: 16px; }
+            .shadow-table { font-size: 12px; }
+            .shadow-table th, .shadow-table td { padding: 8px 10px; }
+            .shadow-table .css-col { display: none; }
+            .suite-badge .badge-prefix { display: none; }
+            .site-footer { padding: 32px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="header-brand">freeboxshadow.app</a>
+        <div class="header-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9728;&#65039;</button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span>&#8250;</span>Tailwind Box Shadow
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-wrap">
+        <article>
+            <h1>Tailwind CSS Box Shadow &#8212; Complete Guide to Shadow Utilities</h1>
+
+            <p>Tailwind CSS provides a set of utility classes that let you apply box shadows to any element without writing custom CSS. The shadow utilities range from barely-visible <code>shadow-sm</code> to dramatic <code>shadow-2xl</code>, and they cover inset shadows and shadow removal as well. This guide explains every default shadow class, shows you how to extend Tailwind with custom shadow values, and demonstrates how <a href="/">freeboxshadow.app</a> helps you create precise shadow values for your Tailwind projects.</p>
+
+            <!-- Default classes reference -->
+            <h2>What Are the Default Tailwind Box Shadow Classes?</h2>
+
+            <p>Tailwind ships with eight box shadow utilities out of the box. Each class maps to one or more CSS <code>box-shadow</code> values, creating shadows that progressively increase in size, blur, and intensity.</p>
+
+            <table class="shadow-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th class="css-col">CSS Value</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>shadow-sm</code></td>
+                        <td class="css-col"><code>0 1px 2px 0 rgb(0 0 0 / 0.05)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow</code></td>
+                        <td class="css-col"><code>0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-md</code></td>
+                        <td class="css-col"><code>0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-lg</code></td>
+                        <td class="css-col"><code>0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-xl</code></td>
+                        <td class="css-col"><code>0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-2xl</code></td>
+                        <td class="css-col"><code>0 25px 50px -12px rgb(0 0 0 / 0.25)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-inner</code></td>
+                        <td class="css-col"><code>inset 0 2px 4px 0 rgb(0 0 0 / 0.05)</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.05);"></div></td>
+                    </tr>
+                    <tr>
+                        <td><code>shadow-none</code></td>
+                        <td class="css-col"><code>0 0 #0000</code></td>
+                        <td><div class="shadow-preview" style="box-shadow: 0 0 #0000;"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>The naming convention is intuitive: <code>shadow-sm</code> is the smallest, the bare <code>shadow</code> class is the default, and sizes increase through <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>2xl</code>. The <code>shadow-inner</code> class creates an inset shadow, and <code>shadow-none</code> removes all box shadows entirely.</p>
+
+            <!-- Usage examples -->
+            <h2>How Do You Use Tailwind Shadow Classes in HTML?</h2>
+
+            <p>Applying a box shadow in Tailwind is as simple as adding the class to any element. Here are practical examples for common UI patterns:</p>
+
+            <h3>Card with a Medium Shadow</h3>
+<pre><code>&lt;div class="bg-white rounded-lg shadow-md p-6"&gt;
+  &lt;h3 class="text-lg font-semibold"&gt;Card Title&lt;/h3&gt;
+  &lt;p class="text-gray-600"&gt;Card content goes here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+            <h3>Button with Shadow and Hover Elevation</h3>
+<pre><code>&lt;button class="bg-blue-600 text-white px-6 py-3 rounded-lg
+               shadow-md hover:shadow-xl transition-shadow duration-200"&gt;
+  Get Started
+&lt;/button&gt;</code></pre>
+
+            <h3>Input Field with Inner Shadow</h3>
+<pre><code>&lt;input type="text"
+       class="w-full border rounded-md px-4 py-2 shadow-inner
+              focus:ring-2 focus:ring-blue-500"
+       placeholder="Enter your email" /&gt;</code></pre>
+
+            <p>These examples show how Tailwind shadow utilities integrate with other utility classes. No custom CSS is needed for standard shadow effects.</p>
+
+            <!-- Hover and transitions -->
+            <h2>How Do You Add Hover Shadow Transitions in Tailwind?</h2>
+
+            <p>One of the most common shadow patterns in modern UI design is the hover lift effect, where an element appears to elevate when a user hovers over it. Tailwind makes this trivial with state-variant prefixes and transition utilities.</p>
+
+<pre><code>&lt;!-- Subtle lift on hover --&gt;
+&lt;div class="shadow-sm hover:shadow-lg transition-shadow duration-200"&gt;
+  Hover to lift
+&lt;/div&gt;
+
+&lt;!-- Card with scale + shadow --&gt;
+&lt;div class="shadow-md hover:shadow-2xl hover:-translate-y-1
+            transition-all duration-200"&gt;
+  Interactive card
+&lt;/div&gt;
+
+&lt;!-- Remove shadow on press --&gt;
+&lt;button class="shadow-lg active:shadow-none transition-shadow duration-150"&gt;
+  Press me
+&lt;/button&gt;</code></pre>
+
+            <p>The key utilities to combine with shadows are <code>transition-shadow</code> (or <code>transition-all</code>) and a duration class like <code>duration-200</code>. You can also use the <code>focus:</code>, <code>active:</code>, and <code>group-hover:</code> prefixes to trigger shadow changes on different interaction states.</p>
+
+            <!-- Colored shadows -->
+            <h2>How Do You Use Colored Shadows in Tailwind CSS?</h2>
+
+            <p>Starting with Tailwind CSS v3.1, you can tint shadows with any color from your palette using the <code>shadow-{color}</code> utilities. This is especially useful for branded UI elements or glassmorphism effects.</p>
+
+<pre><code>&lt;!-- Blue-tinted shadow --&gt;
+&lt;div class="shadow-lg shadow-blue-500/40"&gt;
+  Blue glow
+&lt;/div&gt;
+
+&lt;!-- Branded button with matching shadow --&gt;
+&lt;button class="bg-indigo-600 text-white shadow-lg shadow-indigo-500/50
+               hover:shadow-indigo-500/70 transition-shadow"&gt;
+  Sign Up
+&lt;/button&gt;
+
+&lt;!-- Subtle warm shadow --&gt;
+&lt;div class="shadow-xl shadow-orange-200/30"&gt;
+  Warm glow card
+&lt;/div&gt;</code></pre>
+
+            <p>Colored shadows accept opacity modifiers using the <code>/</code> syntax (e.g., <code>shadow-blue-500/50</code> for 50% opacity). This lets you fine-tune the intensity without defining custom shadow values.</p>
+
+            <!-- Custom shadows -->
+            <h2>How Do You Add Custom Box Shadows in tailwind.config.js?</h2>
+
+            <p>When the default shadow scale does not match your design system, you can extend or override it in your Tailwind configuration file. This is where <a href="/">freeboxshadow.app</a> becomes especially useful: design the shadow visually, copy the CSS value, and paste it into your config.</p>
+
+<pre><code>// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      boxShadow: {
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07),
+                 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'hard': '5px 5px 0px 0px rgba(0, 0, 0, 1)',
+        'glow': '0 0 15px rgba(196, 154, 42, 0.4)',
+        'card': '0 1px 3px rgba(0,0,0,0.08),
+                 0 8px 24px rgba(0,0,0,0.04)',
+        'elevated': '0 12px 40px -8px rgba(0, 0, 0, 0.15)',
+      }
+    }
+  }
+}</code></pre>
+
+            <p>After adding these entries, you can use <code>shadow-soft</code>, <code>shadow-hard</code>, <code>shadow-glow</code>, and so on as utility classes. Combine them with hover variants and transitions just like the built-in shadows.</p>
+
+            <h3>Using Arbitrary Values</h3>
+
+            <p>If you need a one-off shadow without editing your config, Tailwind supports arbitrary values with square brackets:</p>
+
+<pre><code>&lt;!-- Arbitrary shadow value --&gt;
+&lt;div class="shadow-[0_4px_20px_rgba(0,0,0,0.12)]"&gt;
+  Custom one-off shadow
+&lt;/div&gt;
+
+&lt;!-- Arbitrary inset shadow --&gt;
+&lt;div class="shadow-[inset_0_2px_8px_rgba(0,0,0,0.1)]"&gt;
+  Custom inset
+&lt;/div&gt;</code></pre>
+
+            <p>Note that spaces in the CSS value must be replaced with underscores when using the arbitrary value syntax. For complex multi-layer shadows, defining them in <code>tailwind.config.js</code> is cleaner and more maintainable.</p>
+
+            <!-- Using freeboxshadow.app -->
+            <h2>How Does freeboxshadow.app Help with Tailwind Shadows?</h2>
+
+            <p>Creating the perfect shadow by trial and error in code is slow. <a href="/">freeboxshadow.app</a> gives you a visual editor where you can adjust every shadow parameter in real time and see the result immediately on a live preview box.</p>
+
+            <p>Here is the typical workflow for Tailwind projects:</p>
+
+            <ol>
+                <li><strong>Open <a href="/">freeboxshadow.app</a></strong> and use the sliders to set horizontal offset, vertical offset, blur radius, spread radius, and color.</li>
+                <li><strong>Add multiple shadow layers</strong> if your design requires layered shadows (common for realistic depth effects).</li>
+                <li><strong>Toggle inset mode</strong> to create inner shadows for inputs or pressed states.</li>
+                <li><strong>Copy the CSS value</strong> from the output panel with one click.</li>
+                <li><strong>Paste into your Tailwind config</strong> under <code>theme.extend.boxShadow</code>, or use it as an arbitrary value like <code>shadow-[your_value]</code>.</li>
+            </ol>
+
+            <div class="info-box">
+                <p>All processing on freeboxshadow.app happens in your browser. There is no server, no sign-up, and no tracking. Design your shadow, copy the value, and use it in your Tailwind project immediately.</p>
+            </div>
+
+            <!-- Best practices -->
+            <h2>Best Practices for Box Shadows in Tailwind CSS</h2>
+
+            <ul>
+                <li><strong>Use shadows consistently.</strong> Pick 2-3 shadow sizes for your project (e.g., <code>shadow-sm</code> for subtle elements, <code>shadow-md</code> for cards, <code>shadow-xl</code> for modals) and stick to them.</li>
+                <li><strong>Pair shadows with rounded corners.</strong> Shadows look more natural on elements with <code>rounded-lg</code> or <code>rounded-xl</code> classes.</li>
+                <li><strong>Always add transitions.</strong> When combining shadows with hover states, use <code>transition-shadow duration-200</code> for smooth animations.</li>
+                <li><strong>Consider dark mode.</strong> Shadows are less visible on dark backgrounds. Use <code>dark:shadow-lg</code> or <code>dark:shadow-2xl</code> to increase shadow intensity in dark mode, or switch to colored shadows with <code>dark:shadow-white/5</code>.</li>
+                <li><strong>Reduce shadow opacity on colored backgrounds.</strong> Default Tailwind shadows use black at low opacity, which can look harsh on vibrant colored surfaces. Use the colored shadow utilities or define custom values with lower opacity.</li>
+                <li><strong>Performance matters.</strong> Box shadows are generally performant, but avoid animating <code>box-shadow</code> on dozens of elements simultaneously. For heavy animations, consider using <code>filter: drop-shadow()</code> or pseudo-element techniques.</li>
+            </ul>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <details>
+                    <summary>What are the default Tailwind CSS box shadow classes?</summary>
+                    <div class="faq-answer">Tailwind CSS includes eight default box shadow utilities: shadow-sm (small subtle shadow), shadow (default medium shadow), shadow-md (medium shadow), shadow-lg (large shadow), shadow-xl (extra-large shadow), shadow-2xl (largest shadow), shadow-inner (inset shadow), and shadow-none (removes all shadows). Each maps to a specific CSS box-shadow value that increases in size and intensity.</div>
+                </details>
+
+                <details>
+                    <summary>How do I add a custom box shadow in Tailwind CSS?</summary>
+                    <div class="faq-answer">Add custom shadows in your tailwind.config.js file under theme.extend.boxShadow. For example: boxShadow: { 'custom': '4px 4px 15px rgba(0, 0, 0, 0.1)' }. Then use it as shadow-custom in your HTML. You can also use arbitrary values like shadow-[0_4px_12px_rgba(0,0,0,0.15)] directly in your markup without editing the config.</div>
+                </details>
+
+                <details>
+                    <summary>How do I add a hover shadow effect in Tailwind CSS?</summary>
+                    <div class="faq-answer">Use the hover: prefix with any shadow class, such as hover:shadow-lg. Combine it with the transition-shadow and duration-200 utilities for a smooth animation: class="shadow-md hover:shadow-xl transition-shadow duration-200". This creates a natural lift effect on hover.</div>
+                </details>
+
+                <details>
+                    <summary>Can I use colored shadows in Tailwind CSS?</summary>
+                    <div class="faq-answer">Yes. Tailwind CSS v3.1+ supports colored shadows using shadow-{color} utilities. For example, shadow-lg shadow-blue-500/50 applies a large shadow tinted blue at 50% opacity. The shadow color utilities work with any color from your Tailwind palette and support opacity modifiers.</div>
+                </details>
+
+                <details>
+                    <summary>What is the difference between shadow and shadow-md in Tailwind?</summary>
+                    <div class="faq-answer">The shadow class applies a default shadow of 0 1px 3px rgba(0,0,0,0.1) plus 0 1px 2px rgba(0,0,0,0.06), while shadow-md uses 0 4px 6px rgba(0,0,0,0.1) plus 0 2px 4px rgba(0,0,0,0.06). The shadow-md variant has a larger blur radius and vertical offset, making it more visible and suitable for elevated card or modal elements.</div>
+                </details>
+
+                <details>
+                    <summary>How can I generate custom Tailwind shadow values visually?</summary>
+                    <div class="faq-answer">Use freeboxshadow.app to design shadows visually with sliders for offset, blur, spread, and color. The generator produces standard CSS box-shadow values that you can paste directly into your tailwind.config.js under theme.extend.boxShadow, or use as arbitrary values in your Tailwind classes like shadow-[your_value].</div>
+                </details>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-section">
+                <h2>Create Custom Tailwind Shadows Visually</h2>
+                <p>Design the perfect box shadow with real-time preview, copy the CSS value, and paste it straight into your Tailwind config or use it as an arbitrary value.</p>
+                <a href="/" class="cta-btn">Open Box Shadow Generator &rarr;</a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <h3>More Free Tools</h3>
+            <div class="footer-tools">
+                <a href="https://freegradientgen.app" class="footer-tool-link">Gradient Generator</a>
+                <a href="https://freecolorconvert.app" class="footer-tool-link">Color Converter</a>
+                <a href="https://freejsonformatter.app" class="footer-tool-link">JSON Formatter</a>
+                <a href="https://freesqlformatter.app" class="footer-tool-link">SQL Formatter</a>
+                <a href="https://freebase64.app" class="footer-tool-link">Base64 Encoder</a>
+                <a href="https://freecaseconverter.app" class="footer-tool-link">Case Converter</a>
+                <a href="https://freenotepad.app" class="footer-tool-link">Notepad</a>
+            </div>
+            <p class="footer-copy">&copy; freeboxshadow.app</p>
+        </div>
+    </footer>
+
+    <!-- Suite badge -->
+    <a href="https://freesuite.app" class="suite-badge" target="_blank" rel="noopener"><span class="badge-prefix">by </span>freesuite.app</a>
+
+    <!-- Dark mode toggle -->
+    <script>
+    (() => {
+        const toggle = document.getElementById('themeToggle');
+        const getTheme = () => localStorage.getItem('suite_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const apply = (t) => {
+            document.documentElement.classList.toggle('dark', t === 'dark');
+            toggle.textContent = t === 'dark' ? '\uD83C\uDF19' : '\u2600\uFE0F';
+            localStorage.setItem('suite_theme', t);
+        };
+        apply(getTheme());
+        toggle.addEventListener('click', () => apply(document.documentElement.classList.contains('dark') ? 'light' : 'dark'));
+    })();
+    </script>
+</body>
+</html>
