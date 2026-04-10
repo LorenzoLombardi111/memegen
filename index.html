@@ -126,6 +126,11 @@
             font-family: var(--font-body);
             background: var(--bg);
             color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-wrapper {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -572,6 +577,7 @@
     </style>
 </head>
 <body>
+    <div class="app-wrapper">
     <header class="header">
         <a href="/" class="header-brand">freememegen.app</a>
         <div class="header-actions">
@@ -704,6 +710,7 @@
         <span id="statusLeft">800 × 600 px</span>
         <span>All processing happens in your browser — nothing uploaded</span>
     </footer>
+    </div><!-- end app-wrapper -->
 
     <a href="https://freesuite.app" class="suite-badge" target="_blank" rel="noopener">
         <span class="badge-prefix">by </span>freesuite.app
