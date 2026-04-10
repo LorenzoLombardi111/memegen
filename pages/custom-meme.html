@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Make a Custom Meme Online — freememegen.app</title>
+    <meta name="description" content="How to make a custom meme online for free. Upload your own image, add text, customize fonts and colors. No watermark — freememegen.app.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://freememegen.app/pages/custom-meme">
+    <meta name="theme-color" content="#faf9f6">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta property="og:title" content="How to Make a Custom Meme Online — freememegen.app">
+    <meta property="og:description" content="How to make a custom meme online for free. Upload your own image, add text, customize fonts and colors. No watermark — freememegen.app.">
+    <meta property="og:image" content="https://freememegen.app/og-image.svg">
+    <meta property="og:url" content="https://freememegen.app/pages/custom-meme">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Make a Custom Meme Online — freememegen.app">
+    <meta name="twitter:description" content="How to make a custom meme online for free. Upload your own image, add text, customize fonts and colors. No watermark — freememegen.app.">
+    <meta name="twitter:image" content="https://freememegen.app/og-image.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Make a Custom Meme Online — Step-by-Step Guide",
+        "description": "How to make a custom meme online for free. Upload your own image, add text, customize fonts and colors. No watermark — freememegen.app.",
+        "author": { "@type": "Organization", "name": "freememegen.app", "url": "https://freememegen.app/" },
+        "publisher": { "@type": "Organization", "name": "freememegen.app", "url": "https://freememegen.app/" },
+        "mainEntityOfPage": "https://freememegen.app/pages/custom-meme",
+        "datePublished": "2026-04-10",
+        "dateModified": "2026-04-10"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I upload my own image?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Click Upload Image or drag and drop onto the canvas." }
+            },
+            {
+                "@type": "Question",
+                "name": "What image formats are supported?",
+                "acceptedAnswer": { "@type": "Answer", "text": "JPG, PNG, GIF, WebP." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I add more than two text boxes?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, click Add Text for unlimited boxes." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I move text around?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, drag text on the canvas or use the position slider." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I change the font?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Go to the Style tab and select from Impact, Arial Black, Comic Sans, and more." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my custom image kept private?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, everything stays in your browser." }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freememegen.app/" },
+            { "@type": "ListItem", "position": 2, "name": "How to Make a Custom Meme Online", "item": "https://freememegen.app/pages/custom-meme" }
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #faf9f6;
+            --surface: #f4f2ee;
+            --border: #e8e4dd;
+            --text-primary: #1a1917;
+            --text-secondary: #6b6760;
+            --text-muted: #9e9b96;
+            --accent: #C49A2A;
+            --accent-hover: #A8831F;
+            --accent-text: #ffffff;
+            --destructive: #c0392b;
+            --success: #27ae60;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+            --font-body: 'Lora', serif;
+            --font-ui: 'DM Sans', sans-serif;
+        }
+
+        html.dark {
+            --bg: #141412;
+            --surface: #1e1c1a;
+            --border: #2e2b27;
+            --text-primary: #f0ede8;
+            --text-secondary: #9e9b96;
+            --text-muted: #6b6760;
+            --accent: #D4A835;
+            --accent-hover: #C49A2A;
+            --accent-text: #ffffff;
+            --success: #2ecc71;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        html { font-size: 15px; line-height: 1.6; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            flex-shrink: 0;
+        }
+        .header-brand {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .header-brand:hover { color: var(--accent-hover); }
+        .theme-toggle {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 12px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.15s ease;
+        }
+        .theme-toggle:hover { background: var(--border); }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 720px;
+            margin: 24px auto 0;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .breadcrumb nav {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { margin: 0 6px; }
+
+        /* Article */
+        .article {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 24px 48px;
+            width: 100%;
+            flex: 1;
+        }
+        .article h1 {
+            font-family: var(--font-body);
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .article .subtitle {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+        .article h2 {
+            font-family: var(--font-body);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 40px;
+            margin-bottom: 12px;
+        }
+        .article p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        .article ol, .article ul {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+        .article li {
+            margin-bottom: 8px;
+        }
+        .article strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 32px;
+            text-align: center;
+            margin: 48px 0;
+        }
+        .cta-box h3 {
+            font-family: var(--font-ui);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .cta-box p {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .cta-btn {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            background: var(--accent);
+            color: var(--accent-text);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+        .cta-btn:hover { background: var(--accent-hover); }
+
+        /* FAQ */
+        .faq-section { margin-top: 48px; }
+        .faq-section h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .faq-section details {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            background: var(--surface);
+            overflow: hidden;
+        }
+        .faq-section summary {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            padding: 16px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.15s ease;
+        }
+        .faq-section summary::-webkit-details-marker { display: none; }
+        .faq-section summary::after {
+            content: '+';
+            font-family: var(--font-ui);
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 16px;
+            flex-shrink: 0;
+        }
+        .faq-section details[open] summary::after { content: '\2212'; }
+        .faq-section summary:hover { background: var(--border); }
+        .faq-section .faq-answer {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 0 16px 16px;
+            line-height: 1.6;
+        }
+
+        /* Related Tools */
+        .related-tools {
+            margin-top: 48px;
+        }
+        .related-tools h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .tool-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 16px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+        .tool-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow);
+        }
+        .tool-card-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .tool-card-name {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        .tool-card-desc {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* More Tools Footer */
+        .more-tools-footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+            background: var(--surface);
+        }
+        .more-tools-footer h3 {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+        .more-tools-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+        .more-tool-link {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+        .more-tool-link:hover { background: var(--border); }
+        .footer-copy {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 16px;
+        }
+
+        /* Suite Badge */
+        .suite-badge {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-muted);
+            text-decoration: none;
+            z-index: 50;
+        }
+        .suite-badge:hover { color: var(--accent); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .article h1 { font-size: 22px; }
+            .article h2 { font-size: 17px; }
+            .article { padding: 24px 16px 48px; }
+            .breadcrumb { padding: 0 16px; margin-top: 16px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 24px 16px; }
+            .suite-badge .badge-prefix { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="header-brand">freememegen.app</a>
+        <button class="theme-toggle" id="themeToggle">☀️</button>
+    </header>
+
+    <div class="breadcrumb">
+        <nav>
+            <a href="/">Home</a><span class="sep">/</span><span>How to Make a Custom Meme Online</span>
+        </nav>
+    </div>
+
+    <article class="article">
+        <h1>How to Make a Custom Meme Online — Step-by-Step Guide</h1>
+        <p class="subtitle">Last updated April 2026</p>
+
+        <p>Making a custom meme with your own image takes less than a minute when you use the right tool. <strong>freememegen.app</strong> lets you upload any picture, add text, customize fonts and colors, and download a clean meme with no watermark — all inside your browser. This guide walks you through every step so you can create exactly the meme you have in mind.</p>
+
+        <h2>How to Upload Your Own Image</h2>
+        <p>Start by opening <a href="/" style="color:var(--accent);">freememegen.app</a> in any browser. You have two ways to add your image:</p>
+        <ol>
+            <li><strong>Click the Upload Image button</strong> in the editor panel. Your file picker opens and you choose any image file from your device.</li>
+            <li><strong>Drag and drop</strong> the image directly onto the canvas area. The image loads instantly.</li>
+        </ol>
+        <p>freememegen.app supports <strong>JPG, PNG, GIF, and WebP</strong> formats. There is no file-size limit enforced by the app because everything processes locally in your browser — larger images simply take a moment longer to render on the canvas.</p>
+
+        <h2>How to Add and Position Text</h2>
+        <p>Once your image is loaded, you will see two default text boxes: one at the top of the image and one at the bottom. These follow the classic meme format. To edit either box, click on it and start typing.</p>
+        <p>If you need more text boxes, click the <strong>Add Text</strong> button. There is no limit to how many text boxes you can place on a single meme. Each box is independent, so you can customize them separately.</p>
+        <p>To reposition text, simply <strong>drag it on the canvas</strong> to the exact spot you want. You can also use the <strong>position slider</strong> in the text settings panel for precise vertical placement. This is especially useful on mobile where dragging can be less precise.</p>
+
+        <h2>How to Customize Fonts and Colors</h2>
+        <p>Select any text box, then open the <strong>Style tab</strong> in the settings panel. Here you can change:</p>
+        <ul>
+            <li><strong>Font family</strong> — choose from Impact (the classic meme font), Arial Black, Comic Sans, and several other options</li>
+            <li><strong>Font size</strong> — use the slider to scale text up or down</li>
+            <li><strong>Text color</strong> — pick any color using the color picker</li>
+            <li><strong>Outline color and width</strong> — the white-text-with-black-outline look that makes memes readable on any background</li>
+            <li><strong>Text alignment</strong> — left, center, or right</li>
+        </ul>
+        <p>These options give you full control over how your meme text looks. Whether you want the classic Impact look or something completely different, freememegen.app has you covered.</p>
+
+        <h2>How to Download Your Custom Meme</h2>
+        <p>When your meme looks the way you want, click the <strong>Download</strong> button. You can save your meme as:</p>
+        <ul>
+            <li><strong>PNG</strong> — highest quality, supports transparency</li>
+            <li><strong>JPEG</strong> — smaller file size, ideal for sharing online</li>
+        </ul>
+        <p>You can also <strong>copy the meme directly to your clipboard</strong> for pasting into chat apps, social media, or documents. The downloaded image contains no watermark, no branding, and no metadata — it is exactly what you see on the canvas.</p>
+
+        <h2>Tips for Making Great Memes</h2>
+        <p>A few practical tips to make your custom memes stand out:</p>
+        <ul>
+            <li><strong>Keep text short.</strong> The best memes use as few words as possible. If you need a paragraph to explain the joke, it probably needs a rewrite.</li>
+            <li><strong>Use high-contrast text.</strong> White text with a black outline is the standard for a reason — it is readable on any background. Stick with it unless you have a specific reason to change.</li>
+            <li><strong>Match the image to the emotion.</strong> The image sets the tone. Choose a photo or screenshot that already carries the feeling you want to convey.</li>
+            <li><strong>Crop first if needed.</strong> If your image has unnecessary borders or space, crop it before making the meme. You can use <a href="https://freecropimage.app" style="color:var(--accent);">freecropimage.app</a> for a quick crop.</li>
+            <li><strong>Test at small sizes.</strong> Most people will see your meme on a phone screen. Make sure the text is large enough to read on a small display.</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Ready to make your meme?</h3>
+            <p>No sign-up, no watermark, no upload to any server. Just open and create.</p>
+            <a href="/" class="cta-btn">Open freememegen.app</a>
+        </div>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>How do I upload my own image?</summary>
+                <div class="faq-answer">Click Upload Image or drag and drop onto the canvas.</div>
+            </details>
+
+            <details>
+                <summary>What image formats are supported?</summary>
+                <div class="faq-answer">JPG, PNG, GIF, WebP.</div>
+            </details>
+
+            <details>
+                <summary>Can I add more than two text boxes?</summary>
+                <div class="faq-answer">Yes, click Add Text for unlimited boxes.</div>
+            </details>
+
+            <details>
+                <summary>Can I move text around?</summary>
+                <div class="faq-answer">Yes, drag text on the canvas or use the position slider.</div>
+            </details>
+
+            <details>
+                <summary>How do I change the font?</summary>
+                <div class="faq-answer">Go to the Style tab and select from Impact, Arial Black, Comic Sans, and more.</div>
+            </details>
+
+            <details>
+                <summary>Is my custom image kept private?</summary>
+                <div class="faq-answer">Yes, everything stays in your browser.</div>
+            </details>
+        </section>
+
+        <section class="related-tools">
+            <h2>Related Free Tools</h2>
+            <div class="tools-grid">
+                <a href="https://freecropimage.app" class="tool-card">
+                    <div class="tool-card-icon">✂️</div>
+                    <div class="tool-card-name">Image Cropper</div>
+                    <div class="tool-card-desc">Crop images to any size or ratio</div>
+                </a>
+                <a href="https://freeimagecompressor.app" class="tool-card">
+                    <div class="tool-card-icon">📦</div>
+                    <div class="tool-card-name">Image Compressor</div>
+                    <div class="tool-card-desc">Reduce image file size instantly</div>
+                </a>
+                <a href="https://freeimagetopdf.app" class="tool-card">
+                    <div class="tool-card-icon">📄</div>
+                    <div class="tool-card-name">Image to PDF</div>
+                    <div class="tool-card-desc">Convert images to PDF documents</div>
+                </a>
+            </div>
+        </section>
+    </article>
+
+    <footer class="more-tools-footer">
+        <h3>More free tools</h3>
+        <div class="more-tools-links">
+            <a href="https://freecropimage.app" class="more-tool-link">Image Cropper</a>
+            <a href="https://freeimagecompressor.app" class="more-tool-link">Image Compressor</a>
+            <a href="https://freeimagetopdf.app" class="more-tool-link">Image to PDF</a>
+            <a href="https://freeqrcodegen.app" class="more-tool-link">QR Code Generator</a>
+            <a href="https://freeemojipicker.app" class="more-tool-link">Emoji Picker</a>
+            <a href="https://freeslides.app" class="more-tool-link">Presentations</a>
+        </div>
+        <div class="footer-copy">&copy; freememegen.app</div>
+    </footer>
+
+    <a href="https://freesuite.app" class="suite-badge" target="_blank" rel="noopener"><span class="badge-prefix">by </span>freesuite.app</a>
+
+    <script>
+    (() => {
+        const toggle = document.getElementById('themeToggle');
+        const getTheme = () => localStorage.getItem('suite_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const apply = (t) => {
+            document.documentElement.classList.toggle('dark', t === 'dark');
+            toggle.textContent = t === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('suite_theme', t);
+        };
+        apply(getTheme());
+        toggle.addEventListener('click', () => apply(document.documentElement.classList.contains('dark') ? 'light' : 'dark'));
+    })();
+    </script>
+</body>
+</html>

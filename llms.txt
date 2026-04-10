@@ -1,59 +1,50 @@
-# freecodebeautify.app
+# freememegen.app
 
-> Free online code beautifier and formatter for JavaScript, HTML, CSS, JSON, XML, SQL, and more. Runs entirely in your browser — no data uploaded, no sign-up required.
+> Free online meme generator. Choose from templates or upload your own image, add text, and download — no watermark, no signup, runs in your browser.
 
 ## What it does
-freecodebeautify.app is a free, browser-based code beautifier that formats messy or minified code into clean, readable output. All processing happens locally in your browser — no data is uploaded to any server.
+freememegen.app is a free, browser-based meme generator. Create memes with popular templates or your own images, add customizable text with classic meme styling, and download in full quality with no watermarks. All processing happens locally — no images are uploaded to any server.
 
 ## Key facts
 - 100% free, no sign-up required
+- No watermarks on any downloads
 - Works offline (PWA)
 - Privacy-first: zero tracking, no cookies, no analytics
 - Works on desktop, tablet, and mobile
 - Part of the Freesuite collection (freesuite.app)
 
-## Supported languages
-- JavaScript (ES6+, JSX, TypeScript)
-- HTML
-- CSS (SCSS, LESS)
-- JSON
-- XML
-- SQL
-
 ## Features
-- Auto-detect language from code content
-- Manual language selector override
-- Customizable indentation (spaces or tabs, 2/4/8 size)
-- Brace style options (collapse, expand, end-expand)
-- Line wrap settings (none, 80, 120, 160)
-- Drag-and-drop file upload
-- Copy formatted output to clipboard
-- Download beautified file
-- Keyboard shortcuts (Ctrl+Enter to beautify, Ctrl+Shift+C to copy)
+- 20+ built-in meme templates
+- Upload your own image (drag & drop)
+- Classic Impact font with white text and black outline
+- Customizable font, color, outline, size, alignment
+- Multiple text boxes positioned anywhere
+- Drag text to reposition on canvas
+- Download as PNG or JPEG
+- Copy to clipboard
 - Dark mode support
-- Settings saved to localStorage
+- Touch-friendly for mobile
 
 ## Comparisons
-- vs Prettier: freecodebeautify.app is free, runs in-browser with zero config, and supports SQL/XML. Prettier requires npm setup and does not support SQL or XML.
-- vs Beautifier.io: freecodebeautify.app has auto-detection, offline support, SQL/XML formatting, and no ads. Beautifier.io requires an internet connection and shows advertisements.
+- vs Imgflip: freememegen.app is free with no watermarks or ads. Imgflip adds a watermark on the free tier.
+- vs Kapwing: freememegen.app runs entirely in-browser with no account needed. Kapwing requires sign-up and watermarks free exports.
 
 ## Related tools
-- freejsonformatter.app — JSON Formatter
-- freebase64.app — Base64 Encoder/Decoder
-- freediffchecker.app — Diff Checker
-- freeregextester.app — Regex Tester
-- freecaseconverter.app — Case Converter
+- freecropimage.app — Image Cropper
+- freeimagecompressor.app — Image Compressor
+- freeimagetopdf.app — Image to PDF
+- freeqrcodegen.app — QR Code Generator
 
 ## Pages
-- [Home — Code Beautifier](https://freecodebeautify.app/)
-- [freecodebeautify.app vs Prettier](https://freecodebeautify.app/pages/vs-prettier): Feature comparison with Prettier
-- [freecodebeautify.app vs Beautifier.io](https://freecodebeautify.app/pages/vs-beautifier-io): Feature comparison with Beautifier.io
-- [Free JavaScript Beautifier](https://freecodebeautify.app/pages/javascript-beautifier): Format and indent JavaScript, ES6, JSX, TypeScript
-- [Free HTML Formatter](https://freecodebeautify.app/pages/html-formatter): Beautify and indent HTML code
-- [Free JSON Formatter & Beautifier](https://freecodebeautify.app/pages/json-formatter-beautifier): Pretty-print and validate JSON
+- [Home — Meme Generator](https://freememegen.app/)
+- [freememegen.app vs Imgflip](https://freememegen.app/pages/vs-imgflip): Feature comparison with Imgflip
+- [freememegen.app vs Kapwing](https://freememegen.app/pages/vs-kapwing): Feature comparison with Kapwing
+- [Free Meme Maker](https://freememegen.app/pages/meme-maker): Create memes with no watermark
+- [How to Make a Custom Meme](https://freememegen.app/pages/custom-meme): Upload your own image and add text
+- [Free Meme Templates](https://freememegen.app/pages/meme-templates): Browse and use free meme templates
 
 ## Full Content
-For the complete text content of all pages, see [llms-full.txt](https://freecodebeautify.app/llms-full.txt).
+For the complete text content of all pages, see [llms-full.txt](https://freememegen.app/llms-full.txt).
 
 ## URL
-https://freecodebeautify.app/
+https://freememegen.app/

@@ -1,7 +1,7 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="630" fill="#faf9f6"/>
-    <text x="600" y="270" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="48" font-weight="700" fill="#C49A2A">freecodebeautify.app</text>
-    <text x="600" y="330" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="24" fill="#6b6760">Free Online Code Beautifier &amp; Formatter</text>
-    <text x="600" y="380" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="18" fill="#9e9b96">JavaScript  ·  HTML  ·  CSS  ·  JSON  ·  XML  ·  SQL</text>
+    <text x="600" y="260" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="48" font-weight="700" fill="#C49A2A">freememegen.app</text>
+    <text x="600" y="320" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="24" fill="#6b6760">Free Online Meme Generator</text>
+    <text x="600" y="370" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="18" fill="#9e9b96">No Watermark  ·  No Signup  ·  100% Free</text>
     <text x="600" y="430" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="16" fill="#9e9b96">Free · Private · No Sign-Up · freesuite.app</text>
 </svg>

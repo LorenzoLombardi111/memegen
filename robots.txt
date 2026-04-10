@@ -20,4 +20,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://freecodebeautify.app/sitemap.xml
+Sitemap: https://freememegen.app/sitemap.xml

@@ -1,19 +1,15 @@
-const CACHE_NAME = 'codebeautify-v1';
+const CACHE_NAME = 'memegen-v1';
 const ASSETS = [
     '/',
     '/index.html',
     '/manifest.json',
     '/og-image.svg',
     '/favicon.svg',
-    '/libs/beautify.min.js',
-    '/libs/beautify-html.min.js',
-    '/libs/beautify-css.min.js',
-    '/libs/sql-formatter.min.js',
-    '/pages/vs-prettier.html',
-    '/pages/vs-beautifier-io.html',
-    '/pages/javascript-beautifier.html',
-    '/pages/html-formatter.html',
-    '/pages/json-formatter-beautifier.html'
+    '/pages/vs-imgflip.html',
+    '/pages/vs-kapwing.html',
+    '/pages/meme-maker.html',
+    '/pages/custom-meme.html',
+    '/pages/meme-templates.html'
 ];
 
 self.addEventListener('install', (e) => {
