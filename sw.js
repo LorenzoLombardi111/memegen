@@ -1,14 +1,19 @@
-const CACHE_NAME = 'boxshadow-v1';
+const CACHE_NAME = 'codebeautify-v1';
 const ASSETS = [
     '/',
     '/index.html',
     '/manifest.json',
     '/og-image.svg',
-    '/pages/vs-cssgenerator.html',
-    '/pages/vs-shadows-brumm.html',
-    '/pages/css-shadow-examples.html',
-    '/pages/how-to-box-shadow.html',
-    '/pages/tailwind-box-shadow.html'
+    '/favicon.svg',
+    '/libs/beautify.min.js',
+    '/libs/beautify-html.min.js',
+    '/libs/beautify-css.min.js',
+    '/libs/sql-formatter.min.js',
+    '/pages/vs-prettier.html',
+    '/pages/vs-beautifier-io.html',
+    '/pages/javascript-beautifier.html',
+    '/pages/html-formatter.html',
+    '/pages/json-formatter-beautifier.html'
 ];
 
 self.addEventListener('install', (e) => {

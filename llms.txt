@@ -1,9 +1,9 @@
-# freeboxshadow.app
+# freecodebeautify.app
 
-> Free online CSS box-shadow generator. Create, preview, and copy box shadows with a visual editor.
+> Free online code beautifier and formatter for JavaScript, HTML, CSS, JSON, XML, SQL, and more. Runs entirely in your browser — no data uploaded, no sign-up required.
 
 ## What it does
-Box Shadow Generator is a free, browser-based tool that lets you visually create CSS box shadows with live preview. Adjust offset, blur, spread, color, and opacity with sliders. Supports multiple shadow layers, inset shadows, and presets. All processing happens locally in your browser.
+freecodebeautify.app is a free, browser-based code beautifier that formats messy or minified code into clean, readable output. All processing happens locally in your browser — no data is uploaded to any server.
 
 ## Key facts
 - 100% free, no sign-up required
@@ -12,35 +12,48 @@ Box Shadow Generator is a free, browser-based tool that lets you visually create
 - Works on desktop, tablet, and mobile
 - Part of the Freesuite collection (freesuite.app)
 
+## Supported languages
+- JavaScript (ES6+, JSX, TypeScript)
+- HTML
+- CSS (SCSS, LESS)
+- JSON
+- XML
+- SQL
+
 ## Features
-- Visual sliders for offset-x, offset-y, blur, spread, color, and opacity
-- Live preview with instant updates
-- Multiple shadow layers with independent settings
-- Inset shadow support
-- 9 built-in presets (subtle, medium, large, sharp, soft glow, layered, border, neumorphic, floating)
-- Customizable preview background (light, dark, gradient)
-- One-click CSS copy to clipboard
-- Duplicate and delete individual layers
+- Auto-detect language from code content
+- Manual language selector override
+- Customizable indentation (spaces or tabs, 2/4/8 size)
+- Brace style options (collapse, expand, end-expand)
+- Line wrap settings (none, 80, 120, 160)
+- Drag-and-drop file upload
+- Copy formatted output to clipboard
+- Download beautified file
+- Keyboard shortcuts (Ctrl+Enter to beautify, Ctrl+Shift+C to copy)
+- Dark mode support
+- Settings saved to localStorage
 
 ## Comparisons
-- vs CSSGenerator.org: freeboxshadow.app is free with no ads and supports multiple shadow layers, CSSGenerator.org has ads and limited shadow options
-- vs shadows.brumm.af: freeboxshadow.app offers preset styles and inset shadows, shadows.brumm.af focuses on layered shadow generation
+- vs Prettier: freecodebeautify.app is free, runs in-browser with zero config, and supports SQL/XML. Prettier requires npm setup and does not support SQL or XML.
+- vs Beautifier.io: freecodebeautify.app has auto-detection, offline support, SQL/XML formatting, and no ads. Beautifier.io requires an internet connection and shows advertisements.
 
 ## Related tools
-- freegradientgen.app — CSS Gradient Generator
-- freecolorconvert.app — Color Converter
 - freejsonformatter.app — JSON Formatter
+- freebase64.app — Base64 Encoder/Decoder
+- freediffchecker.app — Diff Checker
+- freeregextester.app — Regex Tester
+- freecaseconverter.app — Case Converter
 
 ## Pages
-- [Home — Box Shadow Generator](https://freeboxshadow.app/)
-- [freeboxshadow.app vs CSSGenerator.org](https://freeboxshadow.app/pages/vs-cssgenerator): Comparison with CSSGenerator.org shadow tool
-- [freeboxshadow.app vs shadows.brumm.af](https://freeboxshadow.app/pages/vs-shadows-brumm): Comparison with Brumm shadow generator
-- [CSS Box Shadow Examples](https://freeboxshadow.app/pages/css-shadow-examples): Common shadow styles with code
-- [How to Use CSS box-shadow](https://freeboxshadow.app/pages/how-to-box-shadow): Complete guide to the box-shadow property
-- [Tailwind CSS Box Shadow Guide](https://freeboxshadow.app/pages/tailwind-box-shadow): Using box shadows in Tailwind CSS
+- [Home — Code Beautifier](https://freecodebeautify.app/)
+- [freecodebeautify.app vs Prettier](https://freecodebeautify.app/pages/vs-prettier): Feature comparison with Prettier
+- [freecodebeautify.app vs Beautifier.io](https://freecodebeautify.app/pages/vs-beautifier-io): Feature comparison with Beautifier.io
+- [Free JavaScript Beautifier](https://freecodebeautify.app/pages/javascript-beautifier): Format and indent JavaScript, ES6, JSX, TypeScript
+- [Free HTML Formatter](https://freecodebeautify.app/pages/html-formatter): Beautify and indent HTML code
+- [Free JSON Formatter & Beautifier](https://freecodebeautify.app/pages/json-formatter-beautifier): Pretty-print and validate JSON
 
 ## Full Content
-For the complete text content of all pages, see [llms-full.txt](https://freeboxshadow.app/llms-full.txt).
+For the complete text content of all pages, see [llms-full.txt](https://freecodebeautify.app/llms-full.txt).
 
 ## URL
-https://freeboxshadow.app/
+https://freecodebeautify.app/
