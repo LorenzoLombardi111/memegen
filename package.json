@@ -1,0 +1,27 @@
+{
+  "name": "memegen",
+  "version": "1.0.0",
+  "description": "Free Meme Generator Online — Create memes for free with no watermark",
+  "scripts": {
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenzoLombardi111/memegen.git"
+  },
+  "keywords": [
+    "meme",
+    "generator",
+    "image",
+    "editor"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LorenzoLombardi111/memegen/issues"
+  },
+  "homepage": "https://github.com/LorenzoLombardi111/memegen#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
